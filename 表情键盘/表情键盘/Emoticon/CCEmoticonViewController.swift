@@ -72,7 +72,7 @@ class CCEmoticonViewController: UIViewController {
         collectionView.dataSource = self
         
         //注册cell
-        collectionView.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: collectionViewCellIdentifier)
+        collectionView.registerClass(CCEmoticonCell.self, forCellWithReuseIdentifier: collectionViewCellIdentifier)
     }
 
     //MARK: -懒加载
@@ -90,11 +90,37 @@ extension CCEmoticonViewController: UICollectionViewDataSource {
     }
     //返回cell
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(collectionViewCellIdentifier, forIndexPath: indexPath)
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(collectionViewCellIdentifier, forIndexPath: indexPath) as! CCEmoticonCell
         cell.backgroundColor = UIColor.randomColor()
         return cell
     }
 
+}
+
+//MARK: - 自定义表情cell
+class CCEmoticonCell: UICollectionViewCell {
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        prepareUI()
+    }
+
+    //MARK: - 准备UI
+    private func prepareUI() {
+        //添加子控件
+        contentView.addSubview(emoticonButton)
+        //设置frame
+        emoticonButton.frame = CGRectInset(bounds, 4, 4)
+        emoticonButton.backgroundColor = UIColor.cyanColor()
+        
+    }
+    //MARK: - 懒加载
+    ///表情按钮
+    private lazy var emoticonButton: UIButton = UIButton()
 }
 
 //MARK: - 继承流水布局

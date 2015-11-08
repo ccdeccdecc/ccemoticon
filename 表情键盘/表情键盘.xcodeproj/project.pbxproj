@@ -14,6 +14,7 @@
 		18451FEC1BEF2D50008FA150 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18451FEA1BEF2D50008FA150 /* LaunchScreen.storyboard */; };
 		18451FF51BEF2EF7008FA150 /* CCEmoticonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18451FF41BEF2EF7008FA150 /* CCEmoticonViewController.swift */; };
 		18451FF71BEF5C2A008FA150 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18451FF61BEF5C2A008FA150 /* UIColor+Extension.swift */; };
+		18451FF91BEF6343008FA150 /* Emoticons.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 18451FF81BEF6343008FA150 /* Emoticons.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		18451FED1BEF2D50008FA150 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18451FF41BEF2EF7008FA150 /* CCEmoticonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCEmoticonViewController.swift; sourceTree = "<group>"; };
 		18451FF61BEF5C2A008FA150 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		18451FF81BEF6343008FA150 /* Emoticons.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Emoticons.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 		18451FF31BEF2E66008FA150 /* Emoticon */ = {
 			isa = PBXGroup;
 			children = (
+				18451FF81BEF6343008FA150 /* Emoticons.bundle */,
 				18451FF41BEF2EF7008FA150 /* CCEmoticonViewController.swift */,
 			);
 			path = Emoticon;
@@ -137,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18451FEC1BEF2D50008FA150 /* LaunchScreen.storyboard in Resources */,
+				18451FF91BEF6343008FA150 /* Emoticons.bundle in Resources */,
 				18451FE91BEF2D50008FA150 /* Assets.xcassets in Resources */,
 				18451FE71BEF2D50008FA150 /* Main.storyboard in Resources */,
 			);
