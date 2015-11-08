@@ -13,13 +13,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var textView: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        // 设置自定义的键盘
+        textView.inputView = emoticonVC.view
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    //MARK: - 懒加载
+    private lazy var emoticonVC: CCEmoticonViewController = {
+        let controller = CCEmoticonViewController()
+        
+        return controller
+    }()
+    
 
 
 }
