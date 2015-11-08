@@ -76,7 +76,7 @@ class CCEmoticonViewController: UIViewController {
     }
 
     //MARK: -懒加载
-    private lazy var collectionView = UICollectionView(frame: CGRectZero, collectionViewLayout: UICollectionViewFlowLayout())
+    private lazy var collectionView: UICollectionView = UICollectionView(frame: CGRectZero, collectionViewLayout: CCCollectionViewFlowLayout())
     
     private lazy var toolbarView = UIToolbar()
 
@@ -91,11 +91,35 @@ extension CCEmoticonViewController: UICollectionViewDataSource {
     //返回cell
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(collectionViewCellIdentifier, forIndexPath: indexPath)
-        cell.backgroundColor = UIColor.magentaColor()
+        cell.backgroundColor = UIColor.randomColor()
         return cell
     }
-    
+
 }
 
+//MARK: - 继承流水布局
+///在collectionView布局之前设置layout的参数
+class CCCollectionViewFlowLayout: UICollectionViewFlowLayout {
+    override func prepareLayout() {
+        super.prepareLayout()
+        //item宽度
+        let width = collectionView!.frame.width / 7.0
+        let height = collectionView!.frame.height / 3.0
+        itemSize = CGSize(width: width, height: height)
+        //滚动方向
+        scrollDirection = UICollectionViewScrollDirection.Horizontal
+        //间距
+        minimumLineSpacing = 0
+        minimumInteritemSpacing = 0
+        
+        //取消弹簧效果
+        collectionView?.bounces = false 
+        collectionView?.alwaysBounceHorizontal = false
+        collectionView?.showsHorizontalScrollIndicator = false
+        
+        //分页显示
+        collectionView?.pagingEnabled = true
+    }
+}
 
 
