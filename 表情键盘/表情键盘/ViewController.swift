@@ -15,8 +15,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // 设置自定义的键盘
         textView.inputView = emoticonVC.view
+        print(CCEmoticonPackage.packages())
         
-        emoji()
+//        emoji()
     }
     ///将16进制的0x1f603转成emoji 表情
     private func emoji() {

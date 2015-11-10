@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		182F74E51BF0B3730067E1F6 /* CCEmoticon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182F74E41BF0B3730067E1F6 /* CCEmoticon.swift */; };
 		18451FE21BEF2D50008FA150 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18451FE11BEF2D50008FA150 /* AppDelegate.swift */; };
 		18451FE41BEF2D50008FA150 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18451FE31BEF2D50008FA150 /* ViewController.swift */; };
 		18451FE71BEF2D50008FA150 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18451FE51BEF2D50008FA150 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		182F74E41BF0B3730067E1F6 /* CCEmoticon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCEmoticon.swift; sourceTree = "<group>"; };
 		18451FDE1BEF2D50008FA150 /* 表情键盘.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "表情键盘.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18451FE11BEF2D50008FA150 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18451FE31BEF2D50008FA150 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 			children = (
 				18451FF81BEF6343008FA150 /* Emoticons.bundle */,
 				18451FF41BEF2EF7008FA150 /* CCEmoticonViewController.swift */,
+				182F74E41BF0B3730067E1F6 /* CCEmoticon.swift */,
 			);
 			path = Emoticon;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18451FE41BEF2D50008FA150 /* ViewController.swift in Sources */,
+				182F74E51BF0B3730067E1F6 /* CCEmoticon.swift in Sources */,
 				18451FF51BEF2EF7008FA150 /* CCEmoticonViewController.swift in Sources */,
 				18451FE21BEF2D50008FA150 /* AppDelegate.swift in Sources */,
 				18451FF71BEF5C2A008FA150 /* UIColor+Extension.swift in Sources */,
@@ -304,6 +308,7 @@
 				18451FF21BEF2D50008FA150 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
